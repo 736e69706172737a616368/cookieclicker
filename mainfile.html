@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"34f35f86f82af9b2f103e499081480d1",petok:"33d2db2a2d60656ba08f995b01a0bd4b3f98f02b-1476494753-1800",adblock:1,betok:"c85f75e8ec9ee575a808de2a2d848bad5923d132-1476494753-120",zone:"dashnet.org",rocket:"0",apps:{"ga_key":{"ua":"UA-29324474-2","ga_bs":"2"},"abetterbrowser":{"ie":"8"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Unsurprisingly, this website uses cookies for ads and traffic analysis.","dismiss":"Got it!","learnMore":"Learn more","link":"http://orteil.dashnet.org/cookieconsentpolicy.html","target":"_blank","theme":"http://orteil.dashnet.org/cookieconsent.css","domain":"dashnet.org"};
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+<title>Cookie Clicker</title>
+
+<link href="http://fonts.googleapis.com/css?family=Kavoon&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script src="base64.js"></script>
+<script src="ajax.js"></script>
+<script src="DungeonGen.js"></script>
+<script src="dungeons.js"></script>
+<script src="main.js"></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-29324474-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body>
+
+<div id="topBar">
+	<div>
+		<b>Cookie Clicker</b> &copy; <a href="http://orteil.dashnet.org" target="_blank">Orteil</a>, 2013 - hosted by <a href="http://dashnet.org" target="_blank">DashNet</a> | <a href="http://twitter.com/orteil42" target="_blank">twitter</a> | <a href="http://orteil42.tumblr.com" target="_blank">tumblr</a> | Help? Bugs? Ideas? Check out the <a href="http://forum.dashnet.org" target="_blank">forum</a>! | Chat with us on <a href="http://forum.dashnet.org/discussion/277/irc-chat-channel/p1" target="_blank">IRC</a> | Getting a black screen? Try pressing ctrl-F5!
+		<div id="links" style="display:block;position:absolute;right:8px;top:4px;"></div>
+	</div>
+</div>
+
+<div id="game">
+	<div id="javascriptError">
+		<div style="padding:64px 128px;">
+			<div class="title">Oops, looks like the game isn't loading right!</div>
+			<div>Please make sure your javascript is enabled, then refresh.<br>
+			This could also be caused by a problem on our side, in which case - wait a moment, then refresh!</div>
+		</div>
+	</div>
+
+	<div id="backgroundLayers">
+		<div id="backgroundLayer1"></div>
+		<div id="backgroundLayer2"></div>
+	</div>
+	
+	<div id="goldenCookie" class="goldenCookie"></div>
+	<div id="alert"></div>
+	<div id="particles"></div>
+	<div id="versionNumber" class="title"></div>
+	
+	<div id="sectionLeft" class="inset">
+		<div id="cookieShower"></div>
+		<div class="blackGradient"></div>
+		<div class="blackFiller"></div>
+		<div id="sectionLeftInfo"></div>
+		<div id="cookies" class="title"></div>
+		<div id="cookieAnchor">
+			<div id="cookieShine"></div>
+			<div id="cookieCursors"></div>
+			<div id="bigCookie"></div>
+			<div id="cookieNumbers"></div>
+		</div>
+		<div id="milk">
+			<div id="milkLayer1" class="milkLayer"></div>
+			<div id="milkLayer2" class="milkLayer"></div>
+		</div>
+	</div>
+
+	<div class="separatorLeft"></div>
+	<div class="separatorRight"></div>
+		
+	<div id="sectionMiddle" class="inset">
+		<div id="comments" class="inset title">
+			<div id="prefsButton" class="button">Menu</div>
+			<div id="statsButton" class="button">Stats</div>
+			<div id="logButton" class="button" style="font-size:80%;">Updates</div>
+			<div id="commentsText"></div>
+			<div class="separatorBottom"></div>
+		</div>
+		<div id="rows"></div>
+		<div id="menu"></div>
+		<div id="donateBox">
+			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate" style="margin:0px 16px;">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="BBN2WL3TC6QH4">
+			<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal â€” The safer, easier way to pay online.">
+			<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			Help us keep developing the game!
+		</div>
+	</div>
+
+	<div id="sectionRight" class="inset">
+		<div id="store">
+			<div id="storeTitle" class="inset title">Store</div>
+			<div id="upgrades">
+			</div>
+			<div id="products">
+			</div>
+		</div>
+		
+		<div id="support" style="margin-top:130px;">
+			<div id="supportComment">Sponsored links</div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Cookie Clicker Rectangle -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:300px;height:250px"
+				 data-ad-client="ca-pub-8491708950677704"
+				 data-ad-slot="9349826096"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<!-- AdventureQuest Worlds banner -->
+			<a class="ad" id="aqad" href="http://www.aq.com/landing/cookie/?utm_campaign=AQW_CookieClicker&utm_source=CookieClicker" target="_blank" title="AdventureQuest Worlds" style="background:url(img/aqworldsbanner.jpg) no-repeat;width:300px;height:64px;display:block;position:relative;left:-10px;margin:16px 0px;">
+			</a>
+		</div>
+	</div>
+	
+	<div id="tooltipAnchor"><div id="tooltip" onMouseOut="Game.tooltip.hide();"></div></div>
+
+</div>
+
+</body>
+</html>
